@@ -6,7 +6,7 @@ import tuple from 'immutable-tuple';
 
 const ConnectionContext = React.createContext(null);
 
-export const MAINNET_URL = 'https://solana-api.projectserum.com';
+export const MAINNET_URL = 'http://3.18.89.242:8899';
 export function ConnectionProvider({ children }) {
   const [endpoint, setEndpoint] = useLocalStorageState(
     'connectionEndpoint',
@@ -38,7 +38,7 @@ export function useIsProdNetwork() {
   return endpoint === MAINNET_URL;
 }
 
-export function useSolanaExplorerUrlSuffix() {
+export function useDomiExplorerUrlSuffix() {
   const endpoint = useContext(ConnectionContext).endpoint;
   if (endpoint === clusterApiUrl('devnet')) {
     return '?cluster=devnet';

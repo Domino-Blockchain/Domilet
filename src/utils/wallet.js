@@ -13,7 +13,7 @@ import {
   getOwnedTokenAccounts,
   transferTokens,
 } from './tokens';
-import { TOKEN_PROGRAM_ID, WRAPPED_SOL_MINT } from './tokens/instructions';
+import { TOKEN_PROGRAM_ID, WRAPPED_DOMI_MINT } from './tokens/instructions';
 import {
   ACCOUNT_LAYOUT,
   parseMintData,
@@ -177,7 +177,7 @@ export function useBalanceInfo(publicKey) {
     return null;
   }
 
-  if (mint && mint.equals(WRAPPED_SOL_MINT)) {
+  if (mint && mint.equals(WRAPPED_DOMI_MINT)) {
     return {
       amount,
       decimals: 9,

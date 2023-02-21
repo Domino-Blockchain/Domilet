@@ -10,7 +10,7 @@ export default function TokenIcon({ mint, url, tokenName, size = 20 }) {
   if (!url) {
     if (mint === null) {
       url =
-        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png';
+        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png'; //FIXME change logo
     } else {
       url = TOKENS?.[endpoint]?.find(
         (token) => token.mintAddress === mint?.toBase58(),

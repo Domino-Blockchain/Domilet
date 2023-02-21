@@ -181,7 +181,7 @@ function SendSwapDialog({
       address: destinationAddress,
       size: amount / 10 ** decimals,
     });
-    if (swapInfo.blockchain !== 'sol') {
+    if (swapInfo.blockchain !== 'sol') { //fixme
       throw new Error('Unexpected blockchain');
     }
     return wallet.transferToken(
@@ -212,7 +212,7 @@ function SendSwapDialog({
     <>
       <DialogContent style={{ paddingTop: 16 }}>
         <DialogContentText>
-          SPL {tokenName} can be converted to{' '}
+          DPL {tokenName} can be converted to{' '}
           {swapCoinInfo.erc20Contract ? 'ERC20' : 'native'}{' '}
           {swapCoinInfo.ticker}
           {needMetamask ? ' via MetaMask' : null}.

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSnackbar } from 'notistack';
-import { useConnection, useSolanaExplorerUrlSuffix } from './connection';
+import { useConnection, useDomiExplorerUrlSuffix } from './connection';
 import Button from '@material-ui/core/Button';
 import { confirmTransaction } from './utils';
 
@@ -52,16 +52,16 @@ export function useSendTransaction() {
 }
 
 function ViewTransactionOnExplorerButton({ signature }) {
-  const urlSuffix = useSolanaExplorerUrlSuffix();
+  const urlSuffix = useDomiExplorerUrlSuffix();
   return (
     <Button
       color="inherit"
       component="a"
       target="_blank"
       rel="noopener"
-      href={`https://explorer.solana.com/tx/${signature}` + urlSuffix}
+      href={`http://http://3.18.89.242:3000//tx/${signature}` + urlSuffix}
     >
-      View on Solana Explorer
+      View on Domichain Explorer
     </Button>
   );
 }
