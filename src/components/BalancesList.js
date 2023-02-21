@@ -227,7 +227,7 @@ function BalanceListItemDetails({ publicKey, balanceInfo }) {
         <Typography variant="body2">
           <Link
             href={
-              `http://http://3.18.89.242:3000//account/${publicKey.toBase58()}` + //fixme
+              `http//3.18.89.242:3000/account/${publicKey.toBase58()}` + //fixme
               urlSuffix
             }
             target="_blank"

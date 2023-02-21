@@ -38,7 +38,7 @@ export default function DebugButtons() {
           refreshAccountInfo(wallet.connection, wallet.account.publicKey);
         },
         successMessage:
-          'Success! Please wait up to 30 seconds for the SOL tokens to appear in your wallet.',
+          'Success! Please wait up to 30 seconds for the DOMI tokens to appear in your wallet.',
       },
     );
   }
@@ -63,15 +63,15 @@ export default function DebugButtons() {
     );
   }
 
-  const noSol = amount === 0;
+  const noDomi = amount === 0;
   const requestAirdropDisabled = endpoint === MAINNET_URL;
   return (
     <div style={{ display: 'flex' }}>
       <Tooltip
         title={
           requestAirdropDisabled
-            ? 'Receive some devnet SOL for free. Only enabled on the devnet'
-            : 'Receive some devnet SOL for free'
+            ? 'Receive some devnet DOMI for free. Only enabled on the devnet'
+            : 'Receive some devnet DOMI for free'
         }
       >
         <span>
@@ -87,8 +87,8 @@ export default function DebugButtons() {
       </Tooltip>
       <Tooltip
         title={
-          noSol
-            ? 'Generate and receive balances in a new test token. Requires SOL balance'
+          noDomi
+            ? 'Generate and receive balances in a new test token. Requires DOMI balance'
             : 'Generate and receive balances in a new test token'
         }
       >
@@ -97,7 +97,7 @@ export default function DebugButtons() {
             variant="contained"
             color="primary"
             onClick={mintTestToken}
-            disabled={sending || noSol}
+            disabled={sending || noDomi}
             style={{ marginLeft: 24 }}
           >
             Mint Test Token

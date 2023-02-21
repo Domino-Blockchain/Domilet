@@ -249,7 +249,7 @@ function TokenListItem({
                 target="_blank"
                 rel="noopener"
                 href={
-                  `http://http://3.18.89.242:3000//account/${mintAddress}` +  //FIXME
+                  `http://3.18.89.242:3000/account/${mintAddress}` +  //FIXME
                   urlSuffix
                 }
               >

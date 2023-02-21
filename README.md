@@ -1,4 +1,4 @@
-# Solana SPL Token Mobile Wallet
+# Domichain DPL Token Mobile Wallet
 
 ## Why cordova  and React
 Cordova is really simple to build cross platform mobile applications for any of your needs, this can be used to maintain a website and mobile application from same source code (and maybe transitioning later to react-native).  
@@ -10,3 +10,13 @@ Cordova is really simple to build cross platform mobile applications for any of 
 
 ## Build and run as application
 As you do with any cordova application, ```cordova build android```, ```cordova run android``` and more.
+
+## Working environment
+
+Windows 10
+
+Gradle 7.6
+yarn install v1.22.10
+Android Studio 2012.2.1 Patch 2 - Chipmunk
+Android SDK 33
+Build-tools 34.0.0.rc1

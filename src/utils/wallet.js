@@ -183,8 +183,8 @@ export function useBalanceInfo(publicKey) {
       decimals: 9,
       mint,
       owner,
-      tokenName: 'Wrapped SOL',
-      tokenSymbol: 'SOL',
+      tokenName: 'Wrapped DOMI',
+      tokenSymbol: 'DOMI',
       valid: true,
     };
   }
@@ -220,8 +220,8 @@ export function useBalanceInfo(publicKey) {
       decimals: 9,
       mint: null,
       owner: publicKey,
-      tokenName: 'SOL',
-      tokenSymbol: 'SOL',
+      tokenName: 'DOMI',
+      tokenSymbol: 'DOMI',
       valid: true,
     };
   }

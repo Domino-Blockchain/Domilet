@@ -401,7 +401,7 @@ function ApproveSignatureForm({
   const onOpenAddress = (address) => {
     address &&
       window.open(
-        'http://http://3.18.89.242:3000//address/' + address + explorerUrlSuffix,
+        'http://3.18.89.242:3000/address/' + address + explorerUrlSuffix,
         '_blank',
       );
   };

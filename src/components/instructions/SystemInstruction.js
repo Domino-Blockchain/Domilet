@@ -4,7 +4,7 @@ import LabelValue from './LabelValue';
 
 const TYPE_LABELS = {
   systemCreate: 'Create account',
-  systemTransfer: 'Transfer SOL',
+  systemTransfer: 'Transfer DOMI',
 };
 
 const DATA_LABELS = {

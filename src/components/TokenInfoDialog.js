@@ -44,7 +44,7 @@ export default function TokenInfoDialog({
         <Typography variant="body2" className={classes.explorerLink}>
           <Link
             href={
-              `http://http://3.18.89.242:3000//account/${publicKey.toBase58()}` +
+              `http://3.18.89.242:3000/account/${publicKey.toBase58()}` +
               urlSuffix
             }
             target="_blank"

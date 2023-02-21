@@ -69,7 +69,7 @@ export default function DepositDialog({
     let firstTab = `SPL ${tokenSymbol ?? swapInfo.coin.ticker}`;
     let secondTab = swapInfo.coin.ticker;
     if (!mint) {
-      firstTab = 'SOL';
+      firstTab = 'DOMI';
     } else {
       secondTab = `${
         swapInfo.coin.erc20Contract ? 'ERC20' : 'Native'
@@ -101,13 +101,13 @@ export default function DepositDialog({
           <>
             {publicKey.equals(owner) ? (
               <DialogContentText>
-                This address can only be used to receive SOL. Do not send other
+                This address can only be used to receive DOMI. Do not send other
                 tokens to this address.
               </DialogContentText>
             ) : (
               <DialogContentText>
                 This address can only be used to receive{' '}
-                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send SOL to
+                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send DOMI to
                 this address.
               </DialogContentText>
             )}
@@ -120,7 +120,7 @@ export default function DepositDialog({
             <DialogContentText variant="body2">
               <Link
                 href={
-                  `http://http://3.18.89.242:3000//account/${publicKey.toBase58()}` +
+                  `http://3.18.89.242:3000/account/${publicKey.toBase58()}` +
                   urlSuffix
                 }
                 target="_blank"
