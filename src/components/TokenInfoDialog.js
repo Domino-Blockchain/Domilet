@@ -1,7 +1,7 @@
 import { Typography } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
 import React from 'react';
-import { useSolanaExplorerUrlSuffix } from '../utils/connection';
+import { useDomiExplorerUrlSuffix } from '../utils/connection';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogForm from './DialogForm';
@@ -28,7 +28,7 @@ export default function TokenInfoDialog({
   balanceInfo,
 }) {
   let { mint, tokenName, tokenSymbol } = balanceInfo;
-  const urlSuffix = useSolanaExplorerUrlSuffix();
+  const urlSuffix = useDomiExplorerUrlSuffix();
   const classes = useStyles();
 
   return (
@@ -44,13 +44,13 @@ export default function TokenInfoDialog({
         <Typography variant="body2" className={classes.explorerLink}>
           <Link
             href={
-              `https://explorer.solana.com/account/${publicKey.toBase58()}` +
+              `http://3.18.89.242:3000/account/${publicKey.toBase58()}` +
               urlSuffix
             }
             target="_blank"
             rel="noopener"
           >
-            View on Solana Explorer
+            View on Domichain Explorer
           </Link>
         </Typography>
         {!!mint && (

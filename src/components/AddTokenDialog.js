@@ -26,7 +26,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import {
   useConnectionConfig,
-  useSolanaExplorerUrlSuffix,
+  useDomiExplorerUrlSuffix,
 } from '../utils/connection';
 import Link from '@material-ui/core/Link';
 import CopyableDisplay from './CopyableDisplay';
@@ -234,7 +234,7 @@ function TokenListItem({
   existingAccount,
 }) {
   const [open, setOpen] = useState(false);
-  const urlSuffix = useSolanaExplorerUrlSuffix();
+  const urlSuffix = useDomiExplorerUrlSuffix();
   const alreadyExists = !!existingAccount;
   return (
     <React.Fragment>
@@ -249,7 +249,7 @@ function TokenListItem({
                 target="_blank"
                 rel="noopener"
                 href={
-                  `https://explorer.solana.com/account/${mintAddress}` +
+                  `http://3.18.89.242:3000/account/${mintAddress}` +  //FIXME
                   urlSuffix
                 }
               >

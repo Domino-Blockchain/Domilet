@@ -34,7 +34,7 @@ import SendDialog from './SendDialog';
 import DepositDialog from './DepositDialog';
 import {
   refreshAccountInfo,
-  useSolanaExplorerUrlSuffix,
+  useDomiExplorerUrlSuffix,
 } from '../utils/connection';
 import { showTokenInfoDialog } from '../utils/config';
 import CloseTokenAccountDialog from './CloseTokenAccountButton';
@@ -152,7 +152,7 @@ function BalanceListItem({ publicKey }) {
 }
 
 function BalanceListItemDetails({ publicKey, balanceInfo }) {
-  const urlSuffix = useSolanaExplorerUrlSuffix();
+  const urlSuffix = useDomiExplorerUrlSuffix();
   const classes = useStyles();
   const [sendDialogOpen, setSendDialogOpen] = useState(false);
   const [depositDialogOpen, setDepositDialogOpen] = useState(false);
@@ -227,13 +227,13 @@ function BalanceListItemDetails({ publicKey, balanceInfo }) {
         <Typography variant="body2">
           <Link
             href={
-              `https://explorer.solana.com/account/${publicKey.toBase58()}` +
+              `http//3.18.89.242:3000/account/${publicKey.toBase58()}` + //fixme
               urlSuffix
             }
             target="_blank"
             rel="noopener"
           >
-            View on Solana Explorer
+            View on Domichain Explorer
           </Link>
         </Typography>
       </div>

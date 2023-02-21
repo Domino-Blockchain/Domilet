@@ -6,7 +6,7 @@ import { abbreviateAddress } from '../utils/utils';
 import CopyableDisplay from './CopyableDisplay';
 import {
   useIsProdNetwork,
-  useSolanaExplorerUrlSuffix,
+  useDomiExplorerUrlSuffix,
 } from '../utils/connection';
 import Typography from '@material-ui/core/Typography';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -40,7 +40,7 @@ export default function DepositDialog({
   balanceInfo,
 }) {
   const isProdNetwork = useIsProdNetwork();
-  const urlSuffix = useSolanaExplorerUrlSuffix();
+  const urlSuffix = useDomiExplorerUrlSuffix();
   const { mint, tokenName, tokenSymbol, owner } = balanceInfo;
   const [tab, setTab] = useState(0);
   const [swapInfo] = useAsyncData(async () => {
@@ -69,7 +69,7 @@ export default function DepositDialog({
     let firstTab = `SPL ${tokenSymbol ?? swapInfo.coin.ticker}`;
     let secondTab = swapInfo.coin.ticker;
     if (!mint) {
-      firstTab = 'SOL';
+      firstTab = 'DOMI';
     } else {
       secondTab = `${
         swapInfo.coin.erc20Contract ? 'ERC20' : 'Native'
@@ -101,13 +101,13 @@ export default function DepositDialog({
           <>
             {publicKey.equals(owner) ? (
               <DialogContentText>
-                This address can only be used to receive SOL. Do not send other
+                This address can only be used to receive DOMI. Do not send other
                 tokens to this address.
               </DialogContentText>
             ) : (
               <DialogContentText>
                 This address can only be used to receive{' '}
-                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send SOL to
+                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send DOMI to
                 this address.
               </DialogContentText>
             )}
@@ -120,13 +120,13 @@ export default function DepositDialog({
             <DialogContentText variant="body2">
               <Link
                 href={
-                  `https://explorer.solana.com/account/${publicKey.toBase58()}` +
+                  `http://3.18.89.242:3000/account/${publicKey.toBase58()}` +
                   urlSuffix
                 }
                 target="_blank"
                 rel="noopener"
               >
-                View on Solana Explorer
+                View on Domichain Explorer
               </Link>
             </DialogContentText>
           </>
@@ -156,10 +156,10 @@ function SolletSwapDepositAddress({ balanceInfo, swapInfo }) {
     return (
       <>
         <DialogContentText>
-          Native BTC can be converted to SPL {tokenName} by sending it to the
+          Native BTC can be converted to DPL {tokenName} by sending it to the
           following address:
         </DialogContentText>
-        <CopyableDisplay
+        <CopyableDisplay //todo read into
           value={address}
           label="Native BTC Deposit Address"
           autoFocus

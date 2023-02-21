@@ -1,13 +1,12 @@
 {
-  "name": "com.sollet.mobile",
-  "displayName": "SolletMobile",
+  "name": "com.domilet.mobile",
+  "displayName": "Domilet",
   "version": "1.0.0",
-  "description": "Sollet Mobile Wallet",
+  "description": "Domichain Mobile Wallet",
   "main": "index.js",
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Andrey Donetski",
   "homepage": "./",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -43,7 +42,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "cordova-android": "^9.0.0",
+    "cordova-android": "^10.1.2",
     "cordova-ios": "^6.1.1",
     "cordova-plugin-whitelist": "^1.3.4",
     "gh-pages": "^3.1.0",
@@ -75,6 +74,9 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {}
-    }
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

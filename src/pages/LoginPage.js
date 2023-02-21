@@ -82,7 +82,7 @@ function SeedWordsForm({ mnemonicAndSeed, goForward }) {
           Create New Wallet
         </Typography>
         <Typography paragraph>
-          Create a new wallet to hold Solana and SPL tokens.
+          Create a new wallet to hold Domichain and DPL tokens.
         </Typography>
         <Typography>
           Please write down the following twelve words and keep them in a safe

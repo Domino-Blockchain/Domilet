@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.sollet.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.domilet.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <hook type="before_prepare" src="scripts/prebuild.js" />
-    <name>SolletMobile</name>
+    <name>Domilet</name>
     <description>
-        Sollet Mobile Wallet
+        Domichain Mobile Wallet
     </description>
-    <author email="donetskiandrey@gmail.com">
-        Andrey Donetski
-    </author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

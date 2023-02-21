@@ -16,7 +16,7 @@ import AccountIcon from '@material-ui/icons/AccountCircle';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import SolanaIcon from './SolanaIcon';
+import DomichainIcon from './DomichainIcon';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,7 +45,7 @@ export default function NavigationFrame({ children }) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title} component="h1">
-            Solana SPL Token Wallet
+            Domichain DPL Token Wallet
           </Typography>
           <WalletSelector />
           <NetworkSelector />
@@ -87,7 +87,7 @@ function NetworkSelector() {
       <Hidden smUp>
         <Tooltip title="Select Network" arrow>
           <IconButton color="inherit" onClick={(e) => setAnchorEl(e.target)}>
-            <SolanaIcon />
+            <DomichainIcon />
           </IconButton>
         </Tooltip>
       </Hidden>

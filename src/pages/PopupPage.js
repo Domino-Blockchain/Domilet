@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useWallet, useWalletPublicKeys } from '../utils/wallet';
 import { decodeMessage } from '../utils/transactions';
-import { useConnection, useSolanaExplorerUrlSuffix } from '../utils/connection';
+import { useConnection, useDomiExplorerUrlSuffix as useDomiExplorerUrlSuffix } from '../utils/connection';
 import {
   Typography,
   Divider,
@@ -211,7 +211,7 @@ function ApproveConnectionForm({ origin, onApprove }) {
     <Card>
       <CardContent>
         <Typography variant="h6" component="h1" gutterBottom>
-          Allow this site to access your Solana account?
+          Allow this site to access your Domichain account?
         </Typography>
         <div className={classes.connection}>
           <Typography>{origin}</Typography>
@@ -312,7 +312,7 @@ function isSafeInstruction(publicKeys, owner, instructions) {
           unsafe = true;
         }
       } else if (instruction.type === 'initializeAccount') {
-        // New SPL token accounts are only considered safe if they are owned by this wallet and newly created
+        // New DPL token accounts are only considered safe if they are owned by this wallet and newly created
         let { ownerPubkey, accountPubkey } = instruction.data;
         if (
           owner &&
@@ -367,7 +367,7 @@ function ApproveSignatureForm({
   autoApprove,
 }) {
   const classes = useStyles();
-  const explorerUrlSuffix = useSolanaExplorerUrlSuffix();
+  const explorerUrlSuffix = useDomiExplorerUrlSuffix();
   const connection = useConnection();
   const wallet = useWallet();
   const [publicKeys] = useWalletPublicKeys();
@@ -401,7 +401,7 @@ function ApproveSignatureForm({
   const onOpenAddress = (address) => {
     address &&
       window.open(
-        'https://explorer.solana.com/address/' + address + explorerUrlSuffix,
+        'http://3.18.89.242:3000/address/' + address + explorerUrlSuffix,
         '_blank',
       );
   };
